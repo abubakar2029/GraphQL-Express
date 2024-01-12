@@ -1,5 +1,5 @@
-export const typeDefs = `#graphql
-# ! for required
+// Defining GraphQL schema in string format
+const typeDefs = `#graphql
   type Game {
     id: ID!
     title: String!
@@ -15,10 +15,12 @@ export const typeDefs = `#graphql
     name: String!
     verified: Boolean!
   }
-#   Query gives graphql the entry points for data
   type Query {
     games: [Game]
     reviews: [Review]
     authors: [Author]
   }
 `;
+
+// Exporting the schema for use in other files
+module.exports = { typeDefs };
